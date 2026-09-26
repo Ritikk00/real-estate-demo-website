@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { font-family: 'DM Sans', sans-serif; color: #202522; background: #f5f3ee; font-synthesis: none; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; }
+button, input, select, textarea { font: inherit; }
+::selection { background: #ae815e; color: white; }
+.font-display { font-family: 'Cormorant Garamond', serif; }
+.container-shell { width: min(1240px, calc(100% - 48px)); margin-inline: auto; }
+.eyebrow { letter-spacing: .18em; text-transform: uppercase; font-size: 10px; font-weight: 700; color: #ae815e; }
+.image-zoom { overflow: hidden; }
+.image-zoom img { transition: transform .7s cubic-bezier(.2,.7,.2,1); }
+.image-zoom:hover img { transform: scale(1.045); }
+.fade-up { animation: fadeUp .7s ease both; }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+@media (max-width: 640px) { .container-shell { width: min(100% - 32px, 1240px); } }
